@@ -1,0 +1,6 @@
+E:\Projects\Visual Studio Projects\C#\InterviewPrep\InterviewPrep\bin\Debug\InterviewPrep.exe.config
+E:\Projects\Visual Studio Projects\C#\InterviewPrep\InterviewPrep\obj\Debug\InterviewPrep.csprojResolveAssemblyReference.cache
+E:\Projects\Visual Studio Projects\C#\InterviewPrep\InterviewPrep\bin\Debug\InterviewPrep.exe
+E:\Projects\Visual Studio Projects\C#\InterviewPrep\InterviewPrep\bin\Debug\InterviewPrep.pdb
+E:\Projects\Visual Studio Projects\C#\InterviewPrep\InterviewPrep\obj\Debug\InterviewPrep.exe
+E:\Projects\Visual Studio Projects\C#\InterviewPrep\InterviewPrep\obj\Debug\InterviewPrep.pdb
