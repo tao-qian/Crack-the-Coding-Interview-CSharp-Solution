@@ -8,7 +8,7 @@ namespace InterviewPrep.chapter01
 {
     class question0107
     {
-        static void Main(String[] args)
+        static void NotMain(String[] args)
         {
             int[][] a = new int[][] {new int[]{0,0,3},new int[]{8,0,4},new int[]{7,6,5}};
             SetZero(a);

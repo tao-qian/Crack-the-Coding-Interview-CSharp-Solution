@@ -47,11 +47,26 @@
     <Compile Include="chapter01\question0105.cs" />
     <Compile Include="chapter01\question0106.cs" />
     <Compile Include="chapter01\question0107.cs" />
+    <Compile Include="chapter01\question0108.cs" />
+    <Compile Include="chapter02\Node.cs" />
+    <Compile Include="chapter02\question0203.cs" />
+    <Compile Include="chapter02\question0201.cs" />
+    <Compile Include="chapter02\question0202.cs" />
+    <Compile Include="chapter02\question0204.cs" />
+    <Compile Include="chapter02\question0205.cs" />
+    <Compile Include="chapter02\question0206.cs" />
+    <Compile Include="chapter02\question0207.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="chapter03\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
