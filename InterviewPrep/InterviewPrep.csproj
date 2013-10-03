@@ -56,6 +56,15 @@
     <Compile Include="chapter02\question0205.cs" />
     <Compile Include="chapter02\question0206.cs" />
     <Compile Include="chapter02\question0207.cs" />
+    <Compile Include="chapter03\Queue.cs" />
+    <Compile Include="chapter03\Stack.cs" />
+    <Compile Include="chapter05\BitUtil.cs" />
+    <Compile Include="chapter05\question0501.cs" />
+    <Compile Include="chapter05\question0502.cs" />
+    <Compile Include="chapter05\question0503.cs" />
+    <Compile Include="chapter05\question0505.cs" />
+    <Compile Include="chapter05\question0506.cs" />
+    <Compile Include="chapter05\question0507.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
@@ -65,9 +74,7 @@
   <ItemGroup>
     <Content Include="TODO.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="chapter03\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
