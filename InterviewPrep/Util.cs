@@ -28,7 +28,17 @@ namespace InterviewPrep
             }
         }
 
-        public static void PrintArray(List<String> a)
+
+
+        public static void PrintArray<T>(T[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+        }
+
+        public static void PrintArray<T>(List<T> a)
         {
             for (int i = 0; i < a.Count; i++)
             {

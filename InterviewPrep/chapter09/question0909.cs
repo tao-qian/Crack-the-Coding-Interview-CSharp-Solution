@@ -9,7 +9,7 @@ namespace InterviewPrep.chapter09
     class question0909
     {
 
-        static void Main(String[] args)
+        static void NotMain(String[] args)
         {
             int[] cols = new int[GRID_SIZE];
             for (int i = 0; i < cols.Length; i++)

@@ -74,6 +74,12 @@
     <Compile Include="chapter09\question0907.cs" />
     <Compile Include="chapter09\question0908.cs" />
     <Compile Include="chapter09\question0909.cs" />
+    <Compile Include="chapter09\question0910.cs" />
+    <Compile Include="chapter11\question1101.cs" />
+    <Compile Include="chapter11\question1102.cs" />
+    <Compile Include="chapter11\question1103.cs" />
+    <Compile Include="chapter11\question1105.cs" />
+    <Compile Include="chapter11\question1107.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
