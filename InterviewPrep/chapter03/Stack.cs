@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 namespace InterviewPrep.chapter03
 {
 
-    class Stack
+    public class Stack
     {
-        Node top = null;
-        void Push(int i)
+        public Node top = null;
+        public virtual void Push(int i)
         {
             Node n = new Node(i);
             n.next = top;
             top = n;
         }
 
-        void Push(Node n)
+        public virtual void Push(Node n)
         {
             n.next = top;
             top = n;
         }
 
-        Node Pop()
+        public virtual Node Pop()
         {
             if (top == null)
                 return null;
@@ -31,9 +31,43 @@ namespace InterviewPrep.chapter03
             top = top.next;
             return n;
         }
+
+        public override string ToString()
+        {
+            StringBuilder s = new StringBuilder();
+            Node temp = top;
+            while (temp != null)
+            {
+                s.Append(temp.data + " ");
+                temp = temp.next;
+            }
+            return s.ToString();
+        }
+
+        public bool IsEmpty()
+        {
+            return top == null;
+        }
+
+        public Node Peek()
+        {
+            return top;
+        }
+
+        public int GetSize()
+        {
+            int count = 0;
+            Node temp = top;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
     }
 
-    class Node
+    public class Node
     {
         public int data;
         public Node next;

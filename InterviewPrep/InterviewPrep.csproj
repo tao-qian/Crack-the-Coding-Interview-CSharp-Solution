@@ -56,6 +56,13 @@
     <Compile Include="chapter02\question0205.cs" />
     <Compile Include="chapter02\question0206.cs" />
     <Compile Include="chapter02\question0207.cs" />
+    <Compile Include="chapter03\question0301.cs" />
+    <Compile Include="chapter03\question0302.cs" />
+    <Compile Include="chapter03\question0303.cs" />
+    <Compile Include="chapter03\question0304.cs" />
+    <Compile Include="chapter03\question0305.cs" />
+    <Compile Include="chapter03\question0306.cs" />
+    <Compile Include="chapter03\question0307.cs" />
     <Compile Include="chapter03\Queue.cs" />
     <Compile Include="chapter03\Stack.cs" />
     <Compile Include="chapter05\BitUtil.cs" />

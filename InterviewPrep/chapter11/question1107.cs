@@ -8,7 +8,7 @@ namespace InterviewPrep.chapter11
 {
     class question1107
     {
-        static void Main(String[] args)
+        static void NotMain(String[] args)
         {
             List<int[]> people = new List<int[]> ();
             people.Add(new int[] { 65,100});
