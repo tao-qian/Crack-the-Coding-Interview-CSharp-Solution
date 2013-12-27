@@ -96,6 +96,25 @@
     <Compile Include="chapter11\question1103.cs" />
     <Compile Include="chapter11\question1105.cs" />
     <Compile Include="chapter11\question1107.cs" />
+    <Compile Include="chapter17\question1711.cs" />
+    <Compile Include="chapter17\question1701.cs" />
+    <Compile Include="chapter17\question1702.cs" />
+    <Compile Include="chapter17\question1703.cs" />
+    <Compile Include="chapter17\question1704.cs" />
+    <Compile Include="chapter17\question1705.cs" />
+    <Compile Include="chapter17\question1706.cs" />
+    <Compile Include="chapter17\question1708.cs" />
+    <Compile Include="chapter17\question1712.cs" />
+    <Compile Include="chapter18\question1801.cs" />
+    <Compile Include="chapter18\question1802.cs" />
+    <Compile Include="chapter18\question1806.cs" />
+    <Compile Include="common\LowestCommonAncestor .cs" />
+    <Compile Include="common\MaxSubarray.cs" />
+    <Compile Include="common\MergeSort.cs" />
+    <Compile Include="common\PriorityQueue.cs" />
+    <Compile Include="common\QuickSort.cs" />
+    <Compile Include="common\ReverseWords.cs" />
+    <Compile Include="common\CombinationPermutation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>

@@ -9,7 +9,7 @@ namespace InterviewPrep.chapter11
     class question1102
     {
 
-        static void NotMain(String[] args)
+        static void Main(String[] args)
         {
             String[] s = new String[] { "aaa", "bbb", "aaa", "abab", "babaa", "baba", "bbaaa", "bbaaaa", "bbb" };
             SortByAnagramsEfficient(s);

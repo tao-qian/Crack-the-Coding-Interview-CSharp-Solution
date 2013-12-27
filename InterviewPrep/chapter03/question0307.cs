@@ -8,7 +8,7 @@ namespace InterviewPrep.chapter03
 {
     class question0307
     {
-        public static void Main(String[] args)
+        public static void NotMain(String[] args)
         {
             AnimalQueues q = new AnimalQueues();
             Console.WriteLine();
