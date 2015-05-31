@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{698DBB7D-CD16-4A01-BBC3-20167D7A714B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InterviewPrep</RootNamespace>
+    <AssemblyName>InterviewPrep</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chapter01\question0101.cs" />
+    <Compile Include="chapter01\question0103.cs" />
+    <Compile Include="chapter01\question0104.cs" />
+    <Compile Include="chapter01\question0105.cs" />
+    <Compile Include="chapter01\question0106.cs" />
+    <Compile Include="chapter01\question0107.cs" />
+    <Compile Include="chapter01\question0108.cs" />
+    <Compile Include="chapter02\Node.cs" />
+    <Compile Include="chapter02\question0203.cs" />
+    <Compile Include="chapter02\question0201.cs" />
+    <Compile Include="chapter02\question0202.cs" />
+    <Compile Include="chapter02\question0204.cs" />
+    <Compile Include="chapter02\question0205.cs" />
+    <Compile Include="chapter02\question0206.cs" />
+    <Compile Include="chapter02\question0207.cs" />
+    <Compile Include="chapter03\question0301.cs" />
+    <Compile Include="chapter03\question0302.cs" />
+    <Compile Include="chapter03\question0303.cs" />
+    <Compile Include="chapter03\question0304.cs" />
+    <Compile Include="chapter03\question0305.cs" />
+    <Compile Include="chapter03\question0306.cs" />
+    <Compile Include="chapter03\question0307.cs" />
+    <Compile Include="chapter03\Queue.cs" />
+    <Compile Include="chapter03\Stack.cs" />
+    <Compile Include="chapter04\question0401.cs" />
+    <Compile Include="chapter04\question0402.cs" />
+    <Compile Include="chapter04\question0403.cs" />
+    <Compile Include="chapter04\question0404.cs" />
+    <Compile Include="chapter04\question0405.cs" />
+    <Compile Include="chapter04\question0407.cs" />
+    <Compile Include="chapter04\question0409.cs" />
+    <Compile Include="chapter04\qusetion0406.cs" />
+    <Compile Include="chapter04\Tree.cs" />
+    <Compile Include="chapter05\BitUtil.cs" />
+    <Compile Include="chapter05\question0501.cs" />
+    <Compile Include="chapter05\question0502.cs" />
+    <Compile Include="chapter05\question0503.cs" />
+    <Compile Include="chapter05\question0505.cs" />
+    <Compile Include="chapter05\question0506.cs" />
+    <Compile Include="chapter05\question0507.cs" />
+    <Compile Include="chapter09\question0901.cs" />
+    <Compile Include="chapter09\question0902.cs" />
+    <Compile Include="chapter09\question0903.cs" />
+    <Compile Include="chapter09\question0904.cs" />
+    <Compile Include="chapter09\question0905.cs" />
+    <Compile Include="chapter09\question0906.cs" />
+    <Compile Include="chapter09\question0907.cs" />
+    <Compile Include="chapter09\question0908.cs" />
+    <Compile Include="chapter09\question0909.cs" />
+    <Compile Include="chapter09\question0910.cs" />
+    <Compile Include="chapter11\question1101.cs" />
+    <Compile Include="chapter11\question1102.cs" />
+    <Compile Include="chapter11\question1103.cs" />
+    <Compile Include="chapter11\question1105.cs" />
+    <Compile Include="chapter11\question1107.cs" />
+    <Compile Include="chapter17\question1711.cs" />
+    <Compile Include="chapter17\question1701.cs" />
+    <Compile Include="chapter17\question1702.cs" />
+    <Compile Include="chapter17\question1703.cs" />
+    <Compile Include="chapter17\question1704.cs" />
+    <Compile Include="chapter17\question1705.cs" />
+    <Compile Include="chapter17\question1706.cs" />
+    <Compile Include="chapter17\question1708.cs" />
+    <Compile Include="chapter17\question1712.cs" />
+    <Compile Include="chapter18\question1801.cs" />
+    <Compile Include="chapter18\question1802.cs" />
+    <Compile Include="chapter18\question1806.cs" />
+    <Compile Include="common\LowestCommonAncestor .cs" />
+    <Compile Include="common\MaxSubarray.cs" />
+    <Compile Include="common\MergeSort.cs" />
+    <Compile Include="common\PriorityQueue.cs" />
+    <Compile Include="common\QuickSort.cs" />
+    <Compile Include="common\ReverseWords.cs" />
+    <Compile Include="common\CombinationPermutation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
