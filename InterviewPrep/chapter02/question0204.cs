@@ -9,11 +9,12 @@ x come before all nodes greater than or equal to x
 **/
 namespace InterviewPrep.chapter02
 {
-    class question0204
+    public class Question0204
     {
 
-        static Node partition(int n, Node head)
+        static Node Partition(int n, Node head)
         {
+          return new Node(0);
         }
 
     }
