@@ -62,6 +62,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="chapter01\Question0101Tests.cs" />
+    <Compile Include="chapter01\Question0103Tests.cs" />
+    <Compile Include="chapter01\Question0104Tests.cs" />
+    <Compile Include="chapter01\Question0105Tests.cs" />
+    <Compile Include="chapter01\Question0106Tests.cs" />
+    <Compile Include="chapter01\Question0107Tests.cs" />
+    <Compile Include="chapter01\Question0108Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
