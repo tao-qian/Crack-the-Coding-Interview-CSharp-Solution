@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace InterviewPrep.chapter02
 {
-    class question0202
+    public class Question0202
     {
         /**
             Implement an algorithm to find the kth to last element of a singly linked list
         **/
-        static int kthToLast(int k, Node head)
+        public static int KthToLast(int k, Node head)
         {
+            return 0;
         }
     }
 }

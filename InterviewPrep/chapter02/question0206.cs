@@ -19,6 +19,7 @@ namespace InterviewPrep.chapter02
     {
         static Node getLoopBeginning(Node head)
         {
+            return new Node(0);
         }
     }
 }

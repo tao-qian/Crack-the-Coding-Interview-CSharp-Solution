@@ -16,6 +16,7 @@ namespace InterviewPrep.chapter02
 
         static Boolean isPalindrome(Node n)
         {
+            return false;
         }
     }
 }
