@@ -1,126 +1,97 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="question0205.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The question 0205.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace InterviewPrep.chapter02
+/**
+You have two numbers represented by a linked list, where each node contains a
+single digit. The digits are stored in reverse order, such that the Ts digit is at the
+head of the list. Write a function that adds the two numbers and returns the sum
+as a linked list.
+EXAMPLE
+Input: (7-> 1 -> 6) + (5 -> 9 -> 2).That is, 617 + 295.
+Output: 2 -> 1 -> 9.That is, 912.
+
+FOLLOW UP
+Suppose the digits are stored in forward order. Repeat the above problem.
+EXAMPLE
+Input: (6 -> 1 -> 7) + (2 -> 9 -> 5).That is, 617 + 295.
+Output: 9 -> 1 -> 2.That is, 912.
+**/
+namespace InterviewPrep.Chapter02
 {
-    class question0205
+    using chapter02;
+
+    /// <summary> The question 0205. </summary>
+    public class Question0205
     {
-        static void NotMain(String[] args)
+        /// <summary> The add lists. </summary>
+        /// <param name="n1"> The n 1. </param>
+        /// <param name="n2"> The n 2. </param>
+        /// <param name="carry"> The carry. </param>
+        /// <returns> The <see cref="Node"/>. </returns>
+        public static Node AddLists(Node n1, Node n2, bool carry)
         {
-            Node l = Node.createLinkedList(new int[] { 9,8, 1, 7 });
-            Node r = Node.createLinkedList(new int[] { 2, 9, 5 });
-            Node.printNodes(addListsReverse(l, r));
-            Console.Read();
+            return new Node(0);
         }
 
-        static Node addLists(Node n1, Node n2, bool carry)
+        /// <summary> The add lists reverse. </summary>
+        /// <param name="n1"> The n 1. </param>
+        /// <param name="n2"> The n 2. </param>
+        /// <returns> The <see cref="Node"/>. </returns>
+        public static Node AddListsReverse(Node n1, Node n2)
         {
-            if (n1 == null && n2 == null && !carry)
-                return null;
-
-            int result = 0;
-            if (n1 != null)
-                result += n1.data;
-            if (n2 != null)
-                result += n2.data;
-            if (carry)
-                result++;
-
-            if (result >= 10)
-            {
-                carry = true;
-                result -= 10;
-            }
-            else
-                carry = false;
-
-            Node n = new Node(result);
-
-            n.next = addLists(n1 == null ? null : n1.next, n2 == null ? null : n2.next, carry);
-            return n;
+            return new Node(0);
         }
 
-
-
-        static Node addListsReverse(Node n1, Node n2)
+        /// <summary> The add reverse recur. </summary>
+        /// <param name="n1"> The n 1. </param>
+        /// <param name="n2"> The n 2. </param>
+        /// <returns> The <see cref="NodeWrapper"/>. </returns>
+        public static NodeWrapper addReverseRecur(Node n1, Node n2)
         {
-            int length1 = 0;
-            int length2 = 0;
-            Node r1 = n1;
-            Node r2 = n2;
-            while (r1 != null)
-            {
-                length1++;
-                r1 = r1.next;
-            }
-            while (r2 != null)
-            {
-                length2++;
-                r2 = r2.next;
-            }
-            n2 = pad(length1, length2, n1, n2);
-            n1 = pad(length2, length1, n2, n1);
-            NodeWrapper result = addReverseRecur(n1, n2);
-            if (result.carry == 1)
-            {
-                Node nn = new Node(1);
-                nn.next = result.n;
-                return nn;
-            }
-            else
-            {
-                return result.n;
-            }
+            return new NodeWrapper(0, new Node(0));
         }
 
-        static NodeWrapper addReverseRecur(Node n1, Node n2)
+        //        static Node pad(int r1, int r2, Node n1, Node n2)
+        //100         { 
+        //101             if (r1 <= r2) 
+        //102                 return n2; 
+        //103             int diff = r1 - r2; 
+        //104             Node padding = new Node(0); 
+        //105             Node paddingHead = padding; 
+        //106             for (int i = 1; i<diff; i++) 
+        //107             { 
+        //108                 padding.next = new Node(0); 
+        //109                 padding = padding.next; 
+        //110             } 
+        //111             padding.next = n2; 
+        //112             return paddingHead; 
+        //113         } 
+        //114 
+
+        /// <summary> The node wrapper. </summary>
+        public class NodeWrapper
         {
-            if (n1 == null && n2 == null)
-                return new NodeWrapper(0, null);
+            /// <summary> The carry. </summary>
+            private int carry;
 
-            NodeWrapper wrapper = addReverseRecur(n1.next, n2.next);
-            int result = wrapper.carry + n1.data + n2.data;
-            int carry = 0;
-            if (result >= 10)
-            {
-                result -= 10;
-                carry = 1;
-            }
-            Node current = new Node(result);
-            current.next = wrapper.n;
-            return new NodeWrapper(carry, current);
-        }
+            /// <summary> The n. </summary>
+            private Node n;
 
-
-
-        static Node pad(int r1, int r2, Node n1, Node n2)
-        {
-            if (r1 <= r2)
-                return n2;
-            int diff = r1 - r2;
-            Node padding = new Node(0);
-            Node paddingHead = padding;
-            for (int i = 1; i < diff; i++)
-            {
-                padding.next = new Node(0);
-                padding = padding.next;
-            }
-            padding.next = n2;
-            return paddingHead;
-        }
-
-        class NodeWrapper
-        {
-            public int carry;
-            public Node n;
+            /// <summary> Initializes a new instance of the <see cref="NodeWrapper"/> class. </summary>
+            /// <param name="carry"> The carry. </param>
+            /// <param name="n"> The n. </param>
             public NodeWrapper(int carry, Node n)
             {
                 this.carry = carry;
                 this.n = n;
             }
         }
+
     }
 }

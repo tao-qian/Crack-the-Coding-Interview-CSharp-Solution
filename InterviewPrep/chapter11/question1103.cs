@@ -51,7 +51,7 @@ namespace InterviewPrep.chapter11
                 else if (a[mid] < n)
                     start = mid + 1;
             }
-            return -1;
+            //return -1;
         }
 
         static int FindRotation(int[] a)
@@ -73,7 +73,7 @@ namespace InterviewPrep.chapter11
                 else if (a[mid] <= a[end])
                     end = mid - 1;
             }
-            return -1;
+            //return -1;
         }
     }
 }

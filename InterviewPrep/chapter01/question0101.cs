@@ -1,46 +1,91 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InterviewPrep.chapter01
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="" file="Question0101.cs">
+//   
+// </copyright>
+// <summary>
+//   Question 0101: Does the string have unique characters?
+// </summary>
+// 
+// --------------------------------------------------------------------------------------------------------------------
+namespace InterviewPrep.Chapter01
 {
-    class question0101
+    using System;
+    using System.Collections.Concurrent;
+    using System.Threading.Tasks;
+
+    /// <summary> Question 0101: Does the string have unique characters? </summary>
+    public class Question0101
     {
-        static void NotMain(string[] args)
+        /// <summary> Does the string have unique characters.    </summary>
+        /// <param name="s"> The s.   </param>
+        /// <exception cref="AggregateException"> The exception that contains all the individual exceptions thrown on all threads.  </exception>
+        /// <exception cref="OverflowException"> The dictionary already contains the maximum number of elements,     <see cref="F:System.Int32.MaxValue"/>. </exception> 
+        /// <exception cref="ArgumentNullException"> <paramref name="key"/> is a null reference (Nothing in Visual Basic).  </exception>
+        /// <returns> The <see cref="bool"/>.  </returns>
+        public static bool HasUniqueCharacters(string s)
         {
-            Console.WriteLine(HasUniqueCharactersSpaceEfficient("haha"));
-            Console.WriteLine(HasUniqueCharactersSpaceEfficient("helo wd"));
-
-            Console.Read();
-        }
-
-        static bool HasUniqueCharacters(String s)
-        {
-            if (s.Length > 256)
-                return false;
-            char[] cArray = s.ToCharArray();
-            char[] count = new char[256];
-            for (int i = 0; i < cArray.Length; i++)
+            // Contract.Requires(s != null);
+            if (CornerCase(s))
             {
-                count[cArray[i]]++;
-                if (count[cArray[i]] == 2)
-                    return false;
+                return true;
             }
+
+            var cd = new ConcurrentDictionary<char, bool>();
+            var unique = true;
+            Parallel.ForEach(s, c =>
+                    {
+                        if (cd.ContainsKey(c))
+                        {
+                            unique = false;
+
+                            // TODO: Optimization: Add Cancellation token handling
+                        }
+
+                        cd.GetOrAdd(c, true);
+                    });
+            return unique;
+        }
+
+        /// <summary>
+        /// Does the string have unique characters
+        ///     What if you cannot use additional data structures?
+        /// </summary>
+        /// <param name="s"> The s.  </param>
+        /// <returns> The <see cref="bool"/>.  </returns>
+        public static bool HasUniqueCharactersSpaceEfficient(string s)
+        {
+            // Contract.Requires(s != null);
+            if (CornerCase(s))
+            {
+                return true;
+            }
+
+            for (var i = 0; i < s.Length; i++)
+            {
+                for (var j = i + 1; j < s.Length; j++)
+                {
+                    if (s[i] == s[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+
             return true;
         }
 
-        static bool HasUniqueCharactersSpaceEfficient(String s)
+        /// <summary> The corner case.  </summary>
+        /// <param name="s"> The s.  </param>
+        /// <returns> The <see cref="bool"/>. </returns>
+        /// <exception cref="ArgumentException"> </exception>
+        private static bool CornerCase(string s)
         {
-            if (s.Length > 256)
-                return false;
-            char[] cArray = s.ToCharArray();
-            for(int i = 0;i<cArray.Length;i++)
-                for (int j = i + 1; j < cArray.Length; j++)
-                    if (cArray[i] == cArray[j])
-                        return false;
-            return true;
+            if (string.IsNullOrEmpty(s))
+            {
+                throw new ArgumentNullException(s);
+            }
+
+            return s.Length == 1;
         }
     }
 }

@@ -1,45 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Question0104.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The question 0104.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+/**
 
-namespace InterviewPrep.chapter01
+Write a method to replace all spaces in a string with'%20'. You may assume that
+the string has sufficient space at the end of the string to hold the additional
+characters, and that you are given the "true" length of the string. in place.)
+
+EXAMPLE
+Input: "Mr John Smith
+Output: "Mr%20Dohn%20Smith"
+
+**/
+namespace InterviewPrep.Chapter01
 {
-    class question0104
+    using System;
+    using System.Diagnostics.Contracts;
+
+    /// <summary> The question 0104. </summary>
+    public class Question0104
     {
-        static void NotMain(String[] args)
+        /// <summary> The replace space. </summary>
+        /// <param name="s"> The s. </param>
+        /// <returns> The <see cref="string"/>. </returns>
+        public static string ReplaceSpace(string s)
         {
-            Console.WriteLine(ReplaceSpace("Mr John Smith    "));
-            Console.Read();
+            Contract.Requires(s != null);
+            if (CornerCase(s))
+            {
+                return string.Empty;
+            }
+
+            return string.Empty;
         }
 
-        static String ReplaceSpace(String s)
+        /// <summary> The replace space.  </summary>
+        /// <param name="s"> The s.  </param>
+        public static void ReplaceSpace(ref string s)
         {
-            char[] a = s.ToCharArray();
-            int endPointer = a.Length - 1;
-            int nonSpacePointer = a.Length - 1;
-            while (a[nonSpacePointer] == ' ')
-                nonSpacePointer--;
-            while (endPointer != 0)
+            Contract.Requires(s != null);
+            if (CornerCase(s))
             {
-                if (a[nonSpacePointer] != ' ')
-                {
-                    a[endPointer] = a[nonSpacePointer];
-                    endPointer--;
-                }
-                else
-                {
-                    a[endPointer] = '0';
-                    endPointer--;
-                    a[endPointer] = '2';
-                    endPointer--;
-                    a[endPointer] = '%';
-                    endPointer--;
-                }
-                nonSpacePointer--;
+                s = string.Empty;
             }
-            return new String(a);
+        }
+
+
+        /// <summary> The corner case. </summary>
+        /// <param name="s"> The s. </param> <returns>
+        /// The <see cref="bool"/>. </returns> <exception cref="ArgumentException">
+        /// </exception>
+        private static bool CornerCase(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                throw new ArgumentException(s);
+            }
+
+            return s.Length == 1;
         }
     }
 }

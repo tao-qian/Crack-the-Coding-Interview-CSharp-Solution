@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterviewPrep.chapter02
 {
-    class Node
+    public class Node
     {
         public Node next = null;
         public int data;

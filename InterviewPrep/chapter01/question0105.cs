@@ -1,44 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="question0105.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The question 0105.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace InterviewPrep.chapter01
+/**
+Implement a method to perform basic string compression using the counts
+of repeated characters. For example, the string aabcccccaaa would become
+a2blc5a3. If the "compressed" string would not become smaller than the original
+string, your method should return the original string.
+**/
+
+namespace InterviewPrep.Chapter01
 {
-    class question0105
-    {
-        static void NotMain(String[] args)
-        {
-            Console.WriteLine(Compress("aabcccccaaa"));
-            Console.Read();
-        }
+    using System;
 
-        static String Compress(String s)
+    /// <summary> The question 0105. </summary>
+    public class Question0105
+    {
+        /// <summary> The compress. </summary>
+        /// <param name="s"> The s. </param>
+        /// <returns> The <see cref="string"/>. </returns>
+        public static string Compress(string s)
         {
-            char[] a = s.ToCharArray();
-            StringBuilder sb = new StringBuilder();
-            int repeatCount = 1;
-            int pointer = 0;
-            while (pointer < a.Length - 1)
-            {
-                if (a[pointer] == a[pointer + 1])
-                {
-                    repeatCount++;
-                }
-                else
-                {
-                    sb.Append(a[pointer]);
-                    sb.Append(repeatCount);
-                    repeatCount = 1;
-                }
-                pointer++;
-            }
-            sb.Append(a[pointer]);
-            sb.Append(repeatCount);
-            if (sb.Length > s.Length)
-                return s;
-            return sb.ToString();
+            return string.Empty;
         }
     }
 }
